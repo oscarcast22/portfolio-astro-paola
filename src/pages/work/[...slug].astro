@@ -25,6 +25,8 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+console.log('Rendered Content:', entry.data);
+
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -32,23 +34,37 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
-					<Hero title={entry.data.title} align="start">
-						<div class="details">
-							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
-							</div>
-							<p class="description">{entry.data.description}</p>
-						</div>
-					</Hero>
+					<div class="project-hero">
+						<div>
+					    <a class="back-link" href="/work/"><Icon icon="arrow-left" /> Portafolio</a>
+					    <Hero title={entry.data.title} align="start">
+					    	<div class="details">
+									<p class="description">{entry.data.description}</p>
+					    		<div class="tags">
+					    			{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+					    		</div>
+					    	</div>
+					    </Hero>
+					  </div>
+						<div>
+					    {entry.data.img && <img class="object-cover h-48 w-96" src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					  </div>
+					</div>
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
-					<div class="content">
-						<Content />
-					</div>
+				<div class="content">
+					<Content />
+				</div>
+				<div class="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4">
+					{entry.data.images &&
+						entry.data.images.map((image) => (
+							<img
+								class="mt-5 min-w-full lg:mt-8 rounded-xl"
+								src={image.src}
+								alt={image.img_alt || ''}
+							/>
+						))}
 				</div>
 			</main>
 		</div>
@@ -60,6 +76,20 @@ const { Content } = await entry.render();
 	header {
 		padding-bottom: 2.5rem;
 		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.project-hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2.5rem;
+
+		img {
+			height: 350px;
+      border-radius: 18px;
+			object-fit: cover;
+		}
 	}
 
 	.back-link {
@@ -86,7 +116,6 @@ const { Content } = await entry.render();
 	}
 
 	.content {
-		max-width: 65ch;
 		margin-inline: auto;
 	}
 
@@ -140,12 +169,16 @@ const { Content } = await entry.render();
 		}
 
 		.details {
-			flex-direction: row;
-			gap: 2.5rem;
 		}
 
 		.content :global(blockquote) {
 			font-size: var(--text-2xl);
+		}
+
+	  .project-hero {
+			flex-direction: row;
+
+	
 		}
 	}
 </style>

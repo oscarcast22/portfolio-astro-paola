@@ -35,14 +35,15 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Desarrolladora</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Diseñadora</Pill>
 						<Pill><Icon icon="heart" size="1.33em" /> Apasionada</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Desarrolladora</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Paola carrillo con diseñando con tablet de dibujo"
+					alt="Paola carrillo diseñando con tablet de dibujo"
+					min-width="290"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -121,11 +122,12 @@ const projects = (await getCollection('work'))
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
+		border-radius: 5rem;
+		width: 85%;
 		box-shadow: var(--shadow-md);
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 920px) {
 		.hero {
 			display: grid;
 			grid-template-columns: 6fr 4fr;
@@ -141,7 +143,7 @@ const projects = (await getCollection('work'))
 
 		.hero img {
 			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			border-radius: 3rem;
 			object-fit: cover;
 		}
 	}

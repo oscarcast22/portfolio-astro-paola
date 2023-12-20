@@ -8,6 +8,19 @@ description: |
 tags:
   - Diseño
   - Branding
+images:
+  - src: /assets/projects/cuero-viejo/cuero-viejo-1.jpg
+    img_alt: Descripción de la imagen 1
+  - src: /assets/projects/cuero-viejo/cuero-vievo-2.jpg
+    img_alt: Descripción de la imagen 2
+  - src: /assets/projects/cuero-viejo/cuero-vievo-3.jpg
+    img_alt: Descripción de la imagen 3
+  - src: /assets/projects/cuero-viejo/cuero-vievo-4.jpg
+    img_alt: Descripción de la imagen 1
+  - src: /assets/projects/cuero-viejo/cuero-vievo-5.jpg
+    img_alt: Descripción de la imagen 2
+  - src: /assets/projects/cuero-viejo/cuero-vievo-6.jpg
+    img_alt: Descripción de la imagen 3
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.

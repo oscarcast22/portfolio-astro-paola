@@ -8,18 +8,22 @@ import Hero from '../components/Hero.astro';
 <BaseLayout title="Sobre mi | Paola Carrillo" description="Sobre Paola Carrillo">
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero
-				title="Sobre mi"
-				tagline="Agradezco tu visita a mi espacio en línea. Permíteme compartir contigo más detalles acerca de quién soy y mi trayectoria profesional."
-			>
-			<div class="m-auto">
-				<img
-					width="300"
-					src="/assets/at-work.jpg"
-					alt="Paola Carrillo trabajando"
+			<header class="hero">
+				<Hero
+					title="Sobre mi"
+					tagline="Agradezco tu visita a mi espacio en línea. Permíteme compartir contigo más detalles acerca de quién soy y mi trayectoria profesional."
+					align="start"
 				/>
-			</div>
-			</Hero>
+
+				<img
+					alt="Paola carrillo diseñando con tablet de dibujo"
+					min-width="290"
+					width="480"
+					height="620"
+					src="/assets/portrait.jpg"
+				/>
+			</header>
+
 
 			<section>
 				<h2 class="section-title">Background</h2>
@@ -64,6 +68,36 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 
 <style>
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.hero img {
+		aspect-ratio: 5 / 4;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	@media (min-width: 960px) {
+		.hero {
+			display: grid;
+			grid-template-columns: 6fr 4fr;
+			padding-inline: 2.5rem;
+			gap: 3.75rem;
+		}
+
+		.hero img {
+			aspect-ratio: 3 / 4;
+			border-radius: 4.5rem;
+			object-fit: cover;
+		}
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;

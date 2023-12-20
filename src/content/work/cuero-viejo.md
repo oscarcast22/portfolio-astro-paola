@@ -1,26 +1,30 @@
 ---
-title: Proyecto 4
-publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+title: Cuero Viejo
+publishDate: 2019-12-01 00:00:00
+img: /assets/projects/cuero-viejo/cuero-viejo-portrait.jpg
+img_alt: botellas de mezcal en una mesa
 description: |
-  Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque   habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus   efficitur hendrerit.
 tags:
   - Diseño
-  - Fotofrafia
+  - Branding
+  - Fotografia
 images:
-  - src: /assets/projects/cuero-viejo/cuero-viejo-1.jpg
-    img_alt: Descripción de la imagen 1
-  - src: /assets/projects/cuero-viejo/cuero-vievo-2.jpg
-    img_alt: Descripción de la imagen 2
-  - src: /assets/projects/cuero-viejo/cuero-vievo-3.jpg
-    img_alt: Descripción de la imagen 3
-  - src: /assets/projects/cuero-viejo/cuero-vievo-4.jpg
+  - src: /assets/projects/cuero-viejo/cuero-vievo-1.jpg
     img_alt: Descripción de la imagen 1
   - src: /assets/projects/cuero-viejo/cuero-vievo-5.jpg
     img_alt: Descripción de la imagen 2
-  - src: /assets/projects/cuero-viejo/cuero-vievo-6.jpg
+  - src: /assets/projects/cuero-viejo/cuero-vievo-2.jpg
+    img_alt: Descripción de la imagen 2
+  - src: /assets/projects/cuero-viejo/cuero-vievo-4.jpg
     img_alt: Descripción de la imagen 3
+  - src: /assets/projects/cuero-viejo/cuero-vievo-3.jpg
+    img_alt: Descripción de la imagen 3
+  - src: /assets/projects/cuero-viejo/cuero-vievo-6.jpg
+    img_alt: Descripción de la imagen 1
+  - src: /assets/projects/cuero-viejo/cuero-vievo-7.jpg
+    img_alt: Descripción de la imagen 1
+
 ---
 
 ## Level-two heading
