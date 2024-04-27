@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import EducationTimeLine from '../components/EducationTimeLine.astro';
@@ -61,7 +60,6 @@ import EducationTimeLine from '../components/EducationTimeLine.astro';
 				</div>
 			</section>
 		</main>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -120,6 +118,7 @@ import EducationTimeLine from '../components/EducationTimeLine.astro';
 		grid-column-start: 1;
 		font-size: var(--text-xl);
 		color: var(--gray-0);
+		margin-bottom: 10px;
 	}
 
 	.content {
@@ -144,12 +143,17 @@ import EducationTimeLine from '../components/EducationTimeLine.astro';
 		}
 
 		.about > :global(:first-child) {
-			grid-column-start: 2;
+			grid-column-start: 1;
+			grid-column-end: 4;
 		}
 
 		section {
 			display: contents;
 			font-size: var(--text-lg);
 		}
+
+		.section-title {
+		    margin-bottom: 0px;
+	    }
 	}
 </style>
