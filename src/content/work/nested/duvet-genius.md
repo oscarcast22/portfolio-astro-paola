@@ -9,7 +9,7 @@ tags:
   - Diseño
   - Branding
 images:
-  - src: /assets/projects/cuero-viejo/cuero-viejo-1.jpg
+  - src: /assets/projects/cuero-viejo/cuero-vievo-1.jpg
     img_alt: Descripción de la imagen 1
   - src: /assets/projects/cuero-viejo/cuero-vievo-2.jpg
     img_alt: Descripción de la imagen 2
