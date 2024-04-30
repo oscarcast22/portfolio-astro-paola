@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import EducationTimeLine from '../components/EducationTimeLine.astro';
+import Pill from '../components/Pill.astro';
+import Icon from '../components/Icon.astro';
 ---
 
 <BaseLayout title="Sobre mi | Paola Carrillo" description="Sobre Paola Carrillo">
@@ -56,7 +58,11 @@ import EducationTimeLine from '../components/EducationTimeLine.astro';
 			<section>
 				<h2 class="section-title">Habilidades</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<div class="hability-pills">
+					    <Pill><Icon icon="pencil-line" size="1.33em" /> Diseñadora</Pill>
+					    <Pill><Icon icon="heart" size="1.33em" /> Apasionada</Pill>
+					    <Pill><Icon icon="code" size="1.33em" /> Desarrolladora</Pill>
+				    </div>		
 				</div>
 			</section>
 		</main>
@@ -65,6 +71,12 @@ import EducationTimeLine from '../components/EducationTimeLine.astro';
 </BaseLayout>
 
 <style>
+    
+	.hability-pills {
+		display: flex;
+		gap: 8px;
+	}
+
 	.hero {
 		display: flex;
 		flex-direction: column;
