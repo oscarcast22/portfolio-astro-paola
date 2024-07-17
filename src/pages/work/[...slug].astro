@@ -143,6 +143,15 @@ console.log('Rendered Content:', entry.data);
 		color: var(--gray-0);
 	}
 
+	.content :global(ul) {
+		list-style: outside;
+		padding: 0 0 0 20px;
+	}
+
+	.content :global(li) {
+		margin-top: 8px;
+	}
+
 	.back-link,
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;

@@ -2,13 +2,11 @@
 import Icon from './Icon.astro';
 ---
 
-<theme-toggle>
-	<button>
+	<button  onclick="toggleTheme()" id="theme-toggle">
 		<span class="sr-only">Dark theme</span>
 		<span class="icon light"><Icon icon="sun" /></span>
 		<span class="icon dark"><Icon icon="moon-stars" /></span>
 	</button>
-</theme-toggle>
 
 <style>
 	button {
@@ -41,6 +39,14 @@ import Icon from './Icon.astro';
 		border-radius: 999rem;
 	}
 
+	#theme-toggle {
+  		transition: none;
+	}
+
+	#theme-toggle.theme-transition {
+  		transition: all 0.3s ease;
+	}
+
 	:global(.dark) .icon.light::before {
 		transform: translateX(100%);
 	}
@@ -67,7 +73,7 @@ import Icon from './Icon.astro';
 	}
 </style>
 
-<script>
+<!-- <script>
 	class ThemeToggle extends HTMLElement {
 		constructor() {
 			super();
@@ -86,7 +92,7 @@ import Icon from './Icon.astro';
 
 			// Initialize button state to reflect current theme.
 			const storedTheme = localStorage.getItem('theme');
-      setTheme(storedTheme === 'dark');
+      		setTheme(storedTheme === 'dark');
 		}
 
 		isDark() {
@@ -94,4 +100,4 @@ import Icon from './Icon.astro';
 		}
 	}
 	customElements.define('theme-toggle', ThemeToggle);
-</script>
+</script> -->
