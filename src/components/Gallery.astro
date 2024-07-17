@@ -279,25 +279,16 @@ const { images } = Astro.props;
     }
 
     function handleClickOutside(event: MouseEvent): void {
-      const modalContent: HTMLElement = document.querySelector('.modal-content') as HTMLElement;
-      const navButtons: HTMLElement = document.querySelector('.nav-btns') as HTMLElement;
-      
-      // Obtener las coordenadas del clic relativas al modal
-      const rect = modalContent.getBoundingClientRect();
-      const isInModalContent = (
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom
-      );
+      const isInImage = (event.target === modalImg);
+      const isInNavButtons = (event.target as HTMLElement).closest('.nav-btns') !== null;
 
-      // Si el clic no está dentro del área del modal content o los botones de navegación, cerrar el modal
-      if (!isInModalContent && !navButtons.contains(event.target as Node)) {
+      if (!isInImage && !isInNavButtons) {
         closeModal();
       }
     }
   });
 </script>
+
 
 
 
