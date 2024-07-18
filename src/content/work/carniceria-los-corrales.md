@@ -1,6 +1,6 @@
 ---
 title: Carniceria Los Corrales
-publishDate: 2019-12-01 00:00:00
+publishDate: 2019-12-03 00:00:00
 img: /assets/projects/los-corrales/los-corrales-7.jpg
 img_alt: botellas de mezcal en una mesa
 description: |
