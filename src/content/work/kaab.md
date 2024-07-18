@@ -9,6 +9,7 @@ tags:
   - Diseño
   - Fotofrafia
   - Branding
+  - Redes Sociales
 images:
   - src: /assets/projects/kaab/Kaab-09.jpg
     img_alt: Descripción de la imagen 1

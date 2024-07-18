@@ -8,7 +8,7 @@ description: |
 tags:
   - Diseño
   - Branding
-  - Redes
+  - Redes Sociales
 images:
   - src: /assets/projects/nail-bar/nail-bar1.webp
     img_alt: Descripción de la imagen 1
