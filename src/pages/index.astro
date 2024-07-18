@@ -81,35 +81,13 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-      <section class="with-background bg-variant">
+      		<section class="with-background bg-variant">
 				<header class="mb-8 stack gap-2 lg:gap-4">
 					<h3>Experiencia laboral</h3>
 				</header>
 			  <JobTimeLine />
-		  </section>
-
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Menciones</h3>
-					<p>
-						Puedes ver algunas menciones y reseñas de mis clientes abajo
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+		  	</section>
 		</main>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
