@@ -11,11 +11,12 @@ export const collections = {
 			img: z.string(),
 			img_alt: z.string().optional(),
 			images: z.array(
-        z.object({
-          src: z.string(),
-          img_alt: z.string().optional(),
-        })
-      )
+        		z.object({
+        		  src: z.string(),
+        		  img_alt: z.string().optional(),
+        		})
+      		),
+			video: z.string().optional(),
 		}),
 	}),
 };

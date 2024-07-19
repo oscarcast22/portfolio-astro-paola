@@ -8,15 +8,13 @@ import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 import Gallery from '../../components/Gallery.astro';
+import CallToAction from '../../components/CallToAction.astro';
 
 
 interface Props {
 	entry: CollectionEntry<'work'>;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
 	const work = await getCollection('work');
 	return work.map((entry) => ({
@@ -40,19 +38,23 @@ console.log('Rendered Content:', entry.data);
 				<div class="wrapper stack gap-2">
 					<div class="project-hero">
 						<div>
-					    <a class="back-link" href="/work/"><Icon icon="arrow-left" /> Portafolio</a>
-					    <Hero title={entry.data.title} align="start">
-					    	<div class="details">
-									<p class="description">{entry.data.description}</p>
-					    		<div class="tags">
-					    			{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+					    	<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Portafolio</a>
+					    	<Hero title={entry.data.title} align="start">
+					    		<div class="details">
+										<p class="description">{entry.data.description}</p>
+					    			<div class="tags">
+					    				{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+					    			</div>
 					    		</div>
-					    	</div>
-					    </Hero>
-					  </div>
-						<div>
-					    {entry.data.img && <img transition:name={`cover-${entry.data.title}`} class="object-cover h-48 w-96" src={entry.data.img} alt={entry.data.img_alt || ''} />}
-					  </div>
+					    	</Hero>
+					  	</div>
+					    {entry.data.img && 
+							<img 
+								transition:name={`cover-${entry.data.title}`} 
+								src={entry.data.img} 
+								alt={entry.data.img_alt || ''} 
+							/>
+						}
 					</div>
 				</div>
 			</header>
@@ -61,6 +63,26 @@ console.log('Rendered Content:', entry.data);
 					<Content />
 				</div>
 				<Gallery images={entry.data.images} />
+				{entry.data.video && (
+					<div class="vid-c">
+						  <div class="video-container">
+							<iframe 
+								  class="frame"
+								  src={entry.data.video}
+								  frameborder="0" 
+								  allow="autoplay; fullscreen; picture-in-picture" 
+								  allowfullscreen
+							>
+							</iframe>
+						  </div>
+					</div>
+				)}
+				<div class="button">
+					<CallToAction href="/work/">
+						Volver
+						<Icon icon="arrow-left" size="1.2em" />
+					</CallToAction>
+				</div>
 			</main>
 		</div>
 		<ContactCTA />
@@ -82,13 +104,14 @@ console.log('Rendered Content:', entry.data);
 	}
 
 	.project-hero img {
-    height: 350px;
-    border-radius: 18px;
-    object-fit: cover;
-  }
+    	height: 350px;
+		width: 370px;
+    	border-radius: 18px;
+    	object-fit: cover;
+  	}
 
 	.back-link {
-		display: none;
+		display: block;
 	}
 
 	.details {
@@ -152,13 +175,13 @@ console.log('Rendered Content:', entry.data);
 		margin-top: 8px;
 	}
 
-	.content :global(.vid-c) {
+	.vid-c {
 		display: flex;
 		justify-content: center;
-		margin: 25px 0 15px;
+		margin: 5rem 0 0;
 	}
 
-	.content :global(.video-container) {
+	.video-container {
 		max-width: 500px;
 		display: flex;
   		width: 100%;
@@ -169,7 +192,7 @@ console.log('Rendered Content:', entry.data);
 		border-radius: 20px;
 	}
 
-	.content :global(.frame) {
+	.frame {
 		position: absolute;
   		top: 0;
   		left: 0;
@@ -179,7 +202,7 @@ console.log('Rendered Content:', entry.data);
 	}
 
 	@media (min-width: 560px) {
-		.content :global(.video-container) {
+		.video-container {
 			padding-bottom: 500px;
 		}
 	}
@@ -198,9 +221,13 @@ console.log('Rendered Content:', entry.data);
 		text-decoration-color: currentColor;
 	}
 
-	@media (min-width: 50em) {
+	.button {
+		margin: 80px auto 0;
+		max-width: 520px;
+	}
+
+	@media (min-width: 53em) {
 		.back-link {
-			display: block;
 			align-self: flex-start;
 		}
 
@@ -220,6 +247,10 @@ console.log('Rendered Content:', entry.data);
 		.tags {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.project-hero img {
+			height: 75vw !important;
 		}
 
 	}
