@@ -3,20 +3,20 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="paint-brush" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Creativa</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+	<div class="icon">
+		<Icon icon="heroIcon1" color="var(--accent-regular)" size="8rem" gradient />
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="eye" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Atencion al detalle</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+	<div class="icon">
+		<Icon icon="heroIcon2" color="var(--accent-regular)" size="8rem" gradient />
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Mentalidad estrategica</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+	<div class="icon">
+		<Icon icon="heroIcon3" color="var(--accent-regular)" size="8rem" gradient />
+	</div>
+	<div class="icon">
+		<Icon icon="heroIcon4" color="var(--accent-regular)" size="8rem" gradient />
+	</div>
+	<div class="icon">
+		<Icon icon="heroIcon5" color="var(--accent-regular)" size="8rem" gradient />
 	</div>
 </section>
 
@@ -24,6 +24,7 @@ import Icon from './Icon.astro';
 	.box {
 		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
+		max-width: 90%;
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
@@ -32,7 +33,8 @@ import Icon from './Icon.astro';
 	.skills {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		justify-content: space-between;
+		margin: 0 auto;
 	}
 
 	.skills h2 {
@@ -43,6 +45,10 @@ import Icon from './Icon.astro';
 		color: var(--gray-400);
 	}
 
+	.icon {
+		width: 8rem;
+	}
+
 	@media (min-width: 50em) {
 		.box {
 			border-radius: 1.5rem;
@@ -50,9 +56,7 @@ import Icon from './Icon.astro';
 		}
 
 		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			flex-direction: row;
 		}
 
 		.skills h2 {
