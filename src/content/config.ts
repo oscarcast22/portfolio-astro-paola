@@ -17,6 +17,7 @@ export const collections = {
         		})
       		),
 			video: z.string().optional(),
+			haveVideos: z.boolean().optional(),
 		}),
 	}),
 };

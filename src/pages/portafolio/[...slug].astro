@@ -9,6 +9,7 @@ import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 import Gallery from '../../components/Gallery.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import VideoGallery from '../../components/VideoGallery.astro';
 
 
 interface Props {
@@ -38,7 +39,7 @@ console.log('Rendered Content:', entry.data);
 				<div class="wrapper stack gap-2">
 					<div class="project-hero">
 						<div>
-					    	<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Portafolio</a>
+					    	<a class="back-link" href="/portafolio/"><Icon icon="arrow-left" /> Portafolio</a>
 					    	<Hero title={entry.data.title} align="start">
 					    		<div class="details">
 										<p class="description">{entry.data.description}</p>
@@ -48,13 +49,13 @@ console.log('Rendered Content:', entry.data);
 					    		</div>
 					    	</Hero>
 					  	</div>
-					    {entry.data.img && 
+					    {entry.data.img && (
 							<img 
 								transition:name={`cover-${entry.data.title}`} 
 								src={entry.data.img} 
 								alt={entry.data.img_alt || ''} 
 							/>
-						}
+						)}
 					</div>
 				</div>
 			</header>
@@ -62,6 +63,9 @@ console.log('Rendered Content:', entry.data);
 				<div class="content">
 					<Content />
 				</div>
+				{entry.data.haveVideos && (
+					<VideoGallery />
+				)}
 				<Gallery images={entry.data.images} />
 				{entry.data.video && (
 					<div class="vid-c">
@@ -78,7 +82,7 @@ console.log('Rendered Content:', entry.data);
 					</div>
 				)}
 				<div class="button">
-					<CallToAction href="/work/">
+					<CallToAction href="/portafolio/">
 						Volver
 						<Icon icon="arrow-left" size="1.2em" />
 					</CallToAction>
@@ -108,6 +112,7 @@ console.log('Rendered Content:', entry.data);
 		width: 370px;
     	border-radius: 18px;
     	object-fit: cover;
+		box-shadow: var(--shadow-md);
   	}
 
 	.back-link {
@@ -182,7 +187,7 @@ console.log('Rendered Content:', entry.data);
 	}
 
 	.video-container {
-		max-width: 500px;
+		max-width: 600px;
 		display: flex;
   		width: 100%;
 		padding-bottom: 100%;
@@ -190,6 +195,7 @@ console.log('Rendered Content:', entry.data);
   		position: relative;
   		overflow: hidden;
 		border-radius: 20px;
+		box-shadow: var(--shadow-lg);
 	}
 
 	.frame {
@@ -201,9 +207,9 @@ console.log('Rendered Content:', entry.data);
   		border: 0;
 	}
 
-	@media (min-width: 560px) {
+	@media (min-width: 660px) {
 		.video-container {
-			padding-bottom: 500px;
+			padding-bottom: 600px;
 		}
 	}
 
