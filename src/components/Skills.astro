@@ -1,22 +1,30 @@
 ---
 import Icon from './Icon.astro';
+import TextIcon from './TextIcon.astro';
 ---
 
-<section class="box skills">
-	<div class="icon">
-		<Icon icon="heroIcon1" color="var(--accent-regular)" size="8rem" gradient />
+<section class="box">
+	<div class="skill">
+		<div class="passions">
+			<Icon icon="passionsIcon" color="var(--accent-regular)" size="8rem" gradient />
+		</div>
+		<TextIcon icon='skillText1' color="var(--accent-regular)" width="8rem" height='1.4rem' gradient />
 	</div>
-	<div class="icon">
-		<Icon icon="heroIcon2" color="var(--accent-regular)" size="8rem" gradient />
+	<div class="skill">
+		<Icon icon="brainStorming" color="var(--accent-regular)" size="8rem" gradient />
+		<TextIcon icon='skillText2' color="var(--accent-regular)" width="8rem" height='2.4rem' gradient />
 	</div>
-	<div class="icon">
-		<Icon icon="heroIcon3" color="var(--accent-regular)" size="8rem" gradient />
+	<div class="skill">
+		<Icon icon="direccionArtistica" color="var(--accent-regular)" size="8rem" gradient />
+		<TextIcon icon='skillText3' color="var(--accent-regular)" width="8rem" height='2.1rem' gradient />
 	</div>
-	<div class="icon">
-		<Icon icon="heroIcon4" color="var(--accent-regular)" size="8rem" gradient />
+	<div class="skill">
+		<Icon icon="branding" color="var(--accent-regular)" size="8rem" gradient />
+		<TextIcon icon='skillText4' color="var(--accent-regular)" width="8rem" height='1.3rem' gradient />
 	</div>
-	<div class="icon">
-		<Icon icon="heroIcon5" color="var(--accent-regular)" size="8rem" gradient />
+	<div class="skill">
+		<Icon icon="dibujoDigital" color="var(--accent-regular)" size="8rem" gradient />
+		<TextIcon icon='skillText5' color="var(--accent-regular)" width="8rem" height='2.3rem' gradient />
 	</div>
 </section>
 
@@ -24,43 +32,41 @@ import Icon from './Icon.astro';
 	.box {
 		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
-		max-width: 90%;
-		padding: 1.5rem;
+		min-width: 90%;
+		margin: auto;
+		padding: 1.5rem 1.2rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
+		display: flex;
+		justify-content: space-between;
 	}
 
-	.skills {
+	.skill {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		margin: 0 auto;
+		gap: 10px;
+
 	}
 
-	.skills h2 {
-		font-size: var(--text-lg);
+	.skill h2 {
+		color: var(--accent-regular);
 	}
 
-	.skills p {
-		color: var(--gray-400);
-	}
-
-	.icon {
-		width: 8rem;
-	}
-
-	@media (min-width: 50em) {
+	@media (max-width: 870px) {
 		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
+			flex-direction: column;
+			gap: 25px;
 		}
 
-		.skills {
+		.skill {
 			flex-direction: row;
+			margin: auto;
+			gap: 20px;
+			align-items: center;
 		}
 
-		.skills h2 {
-			font-size: var(--text-2xl);
+		.passions {
+			transform: rotate(60deg);
 		}
 	}
 </style>
