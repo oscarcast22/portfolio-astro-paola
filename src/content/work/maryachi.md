@@ -5,6 +5,8 @@ img: /assets/projects/maryachi/portrait.jpg
 img_alt: ""
 description: |
   Maryachi es una marca de playeras, accesorios y productos creados con amor y orgullo mexicano en la que he aportado mis conocimientos en diseño grafico y multimedia con contenido para sus redes sociales y pagina web
+rol: |
+  Diseñadora Grafica Multimedia
 tags:
   - Diseño
   - Fotofrafia

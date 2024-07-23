@@ -5,6 +5,8 @@ img: /assets/projects/kaab/Kaab-02.webp
 img_alt: ""
 description: |
   Kaab es una marca de fundas para celular biodegradables que desarrollé desde el Branding, creación de contenido, página web, hasta las ilustraciones de las fundas.
+rol: |
+  Emprendimiento
 tags:
   - Diseño
   - Fotofrafia

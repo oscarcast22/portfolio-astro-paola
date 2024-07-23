@@ -5,6 +5,8 @@ img: /assets/projects/los-corrales/los-corrales-7.jpg
 img_alt: botellas de mezcal en una mesa
 description: |
   Mi experiencia laboral inició con mis prácticas profesionales en la Carnicería Los Corrales en el departamento de Diseño. Donde algunas de las actividades a realizar fue apoyo como creadora de contenido en redes sociales, fotografía, creación de marca y material impreso.
+rol: |
+  Practicas profesionales como diseñadora grafica
 tags:
   - Diseño
   - Branding

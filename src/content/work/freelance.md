@@ -5,6 +5,8 @@ img: /assets/projects/freelance/freelance-1.webp
 img_alt: ""
 description: |
   A la par de mi trabajo, también desarrollo proyectos de manera independiente como freelance.
+rol: |
+  Trabajos realizados como freelance
 tags:
   - Diseño
   - Branding

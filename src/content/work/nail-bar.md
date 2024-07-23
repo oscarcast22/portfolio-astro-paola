@@ -5,6 +5,8 @@ img: /assets/projects/nail-bar/portada.webp
 img_alt: ""
 description: |
   Diseñadora gráfica/Community manager para la franquicia de uñas Nailbar. Mis principales tareas a desarrollar fueron las de creación de contenido, creación de marca, apoyo en material impreso.
+rol: |
+  Diseñadora grafica, comunnity manager
 tags:
   - Diseño
   - Branding
