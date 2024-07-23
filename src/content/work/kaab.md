@@ -13,7 +13,7 @@ tags:
   - Branding
   - Redes Sociales
 images:
-  - src: /assets/projects/kaab/Kaab-09.jpg
+  - src: /assets/projects/kaab/Kaab-09.webp
     img_alt: Descripción de la imagen 1
   - src: /assets/projects/kaab/Kaab-01.webp
     img_alt: Descripción de la imagen 2
@@ -23,13 +23,13 @@ images:
     img_alt: Descripción de la imagen 4
   - src: /assets/projects/kaab/Kaab-05.webp
     img_alt: Descripción de la imagen 5
-  - src: /assets/projects/kaab/Kaab-07.jpg
+  - src: /assets/projects/kaab/Kaab-07.webp
     img_alt: Descripción de la imagen 6
-  - src: /assets/projects/kaab/Kaab-08.jpg
+  - src: /assets/projects/kaab/Kaab-08.webp
     img_alt: Descripción de la imagen 7
   - src: /assets/projects/kaab/Kaab-02.webp
     img_alt: Descripción de la imagen 8
-  - src: /assets/projects/kaab/Kaab-06.jpg
+  - src: /assets/projects/kaab/Kaab-06.webp
     img_alt: Descripción de la imagen 9
 video: https://player.vimeo.com/video/744851313?h=1b866b7831
 ---

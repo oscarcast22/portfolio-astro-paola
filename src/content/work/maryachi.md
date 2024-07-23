@@ -1,7 +1,7 @@
 ---
 title: Maryachi
 publishDate: 2024-10-07 00:00:00
-img: /assets/projects/maryachi/portrait.jpg
+img: /assets/projects/maryachi/portrait.webp
 img_alt: ""
 description: |
   Maryachi es una marca de playeras, accesorios y productos creados con amor y orgullo mexicano en la que he aportado mis conocimientos en diseño grafico y multimedia con contenido para sus redes sociales y pagina web
@@ -13,17 +13,17 @@ tags:
   - Branding
   - Redes Sociales
 images:
-  - src: /assets/projects/maryachi/1.jpg
+  - src: /assets/projects/maryachi/1.webp
     img_alt: Descripción de la imagen 1
-  - src: /assets/projects/maryachi/2.jpg
+  - src: /assets/projects/maryachi/2.webp
     img_alt: Descripción de la imagen 2
-  - src: /assets/projects/maryachi/3.jpg
+  - src: /assets/projects/maryachi/3.webp
     img_alt: Descripción de la imagen 3
-  - src: /assets/projects/maryachi/4.jpg
+  - src: /assets/projects/maryachi/4.webp
     img_alt: Descripción de la imagen 4
-  - src: /assets/projects/maryachi/5.jpg
+  - src: /assets/projects/maryachi/5.webp
     img_alt: Descripción de la imagen 5
-  - src: /assets/projects/maryachi/6.jpg
+  - src: /assets/projects/maryachi/6.webp
     img_alt: Descripción de la imagen 6
 haveVideos: true
 ---

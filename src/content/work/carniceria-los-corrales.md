@@ -1,7 +1,7 @@
 ---
 title: Carniceria Los Corrales
 publishDate: 2019-12-03 00:00:00
-img: /assets/projects/los-corrales/los-corrales-7.jpg
+img: /assets/projects/los-corrales/los-corrales-7.webp
 img_alt: botellas de mezcal en una mesa
 description: |
   Mi experiencia laboral inició con mis prácticas profesionales en la Carnicería Los Corrales en el departamento de Diseño. Donde algunas de las actividades a realizar fue apoyo como creadora de contenido en redes sociales, fotografía, creación de marca y material impreso.
@@ -12,11 +12,11 @@ tags:
   - Branding
   - Fotografia
 images:
-  - src: /assets/projects/los-corrales/los-corrales-1.jpg
+  - src: /assets/projects/los-corrales/los-corrales-1.webp
     img_alt: Descripción de la imagen 1
-  - src: /assets/projects/los-corrales/los-corrales-2.jpg
+  - src: /assets/projects/los-corrales/los-corrales-2.webp
     img_alt: Descripción de la imagen 2
-  - src: /assets/projects/los-corrales/los-corrales-3.jpg
+  - src: /assets/projects/los-corrales/los-corrales-3.webp
     img_alt: Descripción de la imagen 3
   - src: /assets/projects/los-corrales/los-corrales-4.webp
     img_alt: Descripción de la imagen 4
