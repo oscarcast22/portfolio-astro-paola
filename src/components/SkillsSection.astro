@@ -1,0 +1,147 @@
+<div class="skills-section">
+    <div class="skills-container">
+        <div class="skill">
+            <span class="skill-name">ILLUSTRATOR</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">PHOTOSHOP</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">LIGHTROOM</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">AFTER EFFECTS</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">ADOBE FRESCO</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <div class="skill">
+            <span class="skill-name">MUSE</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">FINAL CUT</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">ADOBE XD</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">DREAMWEAVER</span>
+            <div class="circles">
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle filled"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .skills-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        gap: 8px;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill-name {
+        width: 120px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .circles {
+        display: flex;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-dark);
+        background-color: transparent;
+    }
+
+    .circle.filled {
+        background-color: var(--accent-dark);
+    }
+
+    @media (max-width: 500px) {
+        .skills-section {
+            justify-content: center;
+        }
+    }
+
+</style>

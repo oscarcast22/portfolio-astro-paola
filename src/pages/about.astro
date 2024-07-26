@@ -2,9 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
-import EducationTimeLine from '../components/EducationTimeLine.astro';
-import Pill from '../components/Pill.astro';
-import Icon from '../components/Icon.astro';
+import JobTimeLine from '../components/JobTimeLine.astro';
+import SkillsSection from '../components/SkillsSection.astro';
 ---
 
 <BaseLayout title="Sobre mi | Paola Carrillo" description="Sobre Paola Carrillo">
@@ -32,39 +31,27 @@ import Icon from '../components/Icon.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl
-						condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu
-						odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum
-						dui faucibus in ornare.
+						Mi nombre es Paola, egresada de a Licenciatura de Diseño gráfico Digital de la Universidad Autónoma de Durango(2015-2018)
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						Amante del Diseño, del Arte y la ilustración, si bien considero ésta el área que me apasiona más y que he aprendido a desenvolverme me gusta comprender todos los aspectos del proceso de diseño para poder realizar cualquier trabajo con un enfoque multidisciplinario que me parece especialmente importante al trabajar.
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Soy una comprometida a ayudar a los clientes a dar forma a su identidad de marca mediante el uso de diseños gráficos convincentes. Acostumbrada a colaborar con otros profesionales creativos para alcanzar los objetivos del proyecto.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Educacion</h2>
-				<EducationTimeLine />
-			</section>
-			<section>
-				<h2 class="section-title">Habilidades</h2>
+				<div class="section-title">
+					<h2 class="skill-title">skills</h2>
+				</div>
 				<div class="content">
-					<div class="hability-pills">
-					    <Pill><Icon icon="pencil-line" size="1.33em" /> Diseñadora</Pill>
-					    <Pill><Icon icon="heart" size="1.33em" /> Apasionada</Pill>
-					    <Pill><Icon icon="code" size="1.33em" /> Desarrolladora</Pill>
-				    </div>		
+					<SkillsSection />	
 				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Experiencia Laboral</h2>
+				<JobTimeLine />
 			</section>
 		</main>
 		<ContactCTA />
@@ -135,8 +122,21 @@ import Icon from '../components/Icon.astro';
 		margin-bottom: 10px;
 	}
 
+	.skill-title {
+		transform: none;
+		height: fit-content;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin-bottom: 10px;
+
+	}
+
 	.content {
 		grid-column: 2 / 4;
+	}
+
+	.content p {
+		margin-bottom: 8px;
 	}
 
 	.content :global(a) {
@@ -154,6 +154,7 @@ import Icon from '../components/Icon.astro';
 		.about {
 			display: grid;
 			grid-template-columns: 1fr 60% 1fr;
+			column-gap: 1.5rem;
 		}
 
 		.about > :global(:first-child) {
@@ -169,5 +170,9 @@ import Icon from '../components/Icon.astro';
 		.section-title {
 		    margin-bottom: 0px;
 	    }
+
+		.skill-title {
+			transform: rotate(270deg);
+		}
 	}
 </style>
