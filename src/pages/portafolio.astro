@@ -8,6 +8,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 import Ilustraciones from '../sections/ilustraciones.astro';
+import Videos from '../sections/Videos.astro';
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -35,6 +36,7 @@ const projects = (await getCollection('work')).sort(
 				}
 			</Grid>
 			<Ilustraciones />
+			<Videos />
 		</main>
 		<ContactCTA />
 	</div>
