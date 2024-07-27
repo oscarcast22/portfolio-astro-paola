@@ -5,8 +5,8 @@ const currentYear = new Date().getFullYear();
 
 <footer>
 	<div class="group">
-		<p>
-			Diseñado en Durango con <a href="https://astro.build/">Astro</a>
+		<p class="credits">
+			Diseñado por Paola con <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
 		<p>&copy; {currentYear} Paola Carrillo</p>
@@ -45,6 +45,12 @@ const currentYear = new Date().getFullYear();
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+	}
+
+	.credits {
+		display: flex;
+		gap: 5px;
+		align-self: center;
 	}
 
 	.socials {
