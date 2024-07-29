@@ -10,7 +10,7 @@ const { images } = Astro.props;
 ---
 <section class="gallery">
   {images.map((image) =>
-    <div class="img-card">
+    <div class="img-card-project">
       <img src={image.src} alt={image.img_alt}>
     </div>
   )}
@@ -35,7 +35,7 @@ const { images } = Astro.props;
     margin: 40px 0 20px;
   }
 
-  .img-card {
+  .img-card-project {
     position: relative;
     width: 100%;
     padding-bottom: 75%;
@@ -44,7 +44,7 @@ const { images } = Astro.props;
     box-shadow: var(--shadow-lg);
   }
 
-  .img-card img {
+  .img-card-project img {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +56,7 @@ const { images } = Astro.props;
     cursor: pointer;
   }
 
-  .img-card:hover img {
+  .img-card-project:hover img {
     scale: 1.1;
   }
 
@@ -217,75 +217,78 @@ const { images } = Astro.props;
       img_alt: string;
     }
 
-    const imgCards: NodeListOf<HTMLElement> = document.querySelectorAll('.img-card');
-    const images: ImageInfo[] = Array.from(imgCards).map(card => {
-      const img = card.querySelector('img') as HTMLImageElement;
-      return { src: img.src, img_alt: img.alt };
-    });
+    const imgCards: NodeListOf<HTMLElement> = document.querySelectorAll('.img-card-project');
 
-    let currentIndex: number = 0;
-    const modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
-    const modalImg: HTMLImageElement = modal.querySelector('img') as HTMLImageElement;
+    if(imgCards) {
+      const images: ImageInfo[] = Array.from(imgCards).map(card => {
+        const img = card.querySelector('img') as HTMLImageElement;
+        return { src: img.src, img_alt: img.alt };
+      });
+      let currentIndex: number = 0;
+      const modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
+      const modalImg: HTMLImageElement = modal.querySelector('img') as HTMLImageElement;
 
-    imgCards.forEach((card, index) => {
-      card.addEventListener('click', () => openModal(index));
-    });
+      imgCards.forEach((card, index) => {
+        card.addEventListener('click', () => openModal(index));
+      });
 
-    (document.querySelector('.close') as HTMLElement).addEventListener('click', closeModal);
-    (document.querySelector('.prev') as HTMLElement).addEventListener('click', prevImage);
-    (document.querySelector('.next') as HTMLElement).addEventListener('click', nextImage);
-    modal.addEventListener('click', handleClickOutside);
+      (document.querySelector('.close') as HTMLElement).addEventListener('click', closeModal);
+      (document.querySelector('.prev') as HTMLElement).addEventListener('click', prevImage);
+      (document.querySelector('.next') as HTMLElement).addEventListener('click', nextImage);
+      modal.addEventListener('click', handleClickOutside);
 
-    function openModal(index: number): void {
-      currentIndex = index;
-      modalImg.src = images[index].src;
-      modalImg.alt = images[index].img_alt;
-      modal.classList.add('open');
-      setTimeout(() => {
-        modal.classList.add('fade-in');
-      }, 10);
-    }
+      function openModal(index: number): void {
+        currentIndex = index;
+        modalImg.src = images[index].src;
+        modalImg.alt = images[index].img_alt;
+        modal.classList.add('open');
+        setTimeout(() => {
+          modal.classList.add('fade-in');
+        }, 10);
+      }
 
-    function closeModal(): void {
-      modal.classList.remove('fade-in');
-      setTimeout(() => {
-        modal.classList.remove('open');
-      }, 300);
-    }
+      function closeModal(): void {
+        modal.classList.remove('fade-in');
+        setTimeout(() => {
+          modal.classList.remove('open');
+        }, 300);
+      }
 
-    function nextImage(): void {
-      currentIndex = (currentIndex + 1) % images.length;
-      changeImage();
-    }
+      function nextImage(): void {
+        currentIndex = (currentIndex + 1) % images.length;
+        changeImage();
+      }
 
-    function prevImage(): void {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      changeImage();
-    }
+      function prevImage(): void {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        changeImage();
+      }
 
-    function changeImage(): void {
-      modalImg.classList.add('fade-out');
-      setTimeout(() => {
-        modalImg.src = images[currentIndex].src;
-        modalImg.alt = images[currentIndex].img_alt;
-        modalImg.classList.remove('fade-out');
-        requestAnimationFrame(() => {
-          modalImg.classList.add('fade-in');
-          setTimeout(() => {
-            modalImg.classList.remove('fade-in');
-          }, 300);
-        });
-      }, 300);
-    }
+      function changeImage(): void {
+        modalImg.classList.add('fade-out');
+        setTimeout(() => {
+          modalImg.src = images[currentIndex].src;
+          modalImg.alt = images[currentIndex].img_alt;
+          modalImg.classList.remove('fade-out');
+          requestAnimationFrame(() => {
+            modalImg.classList.add('fade-in');
+            setTimeout(() => {
+              modalImg.classList.remove('fade-in');
+            }, 300);
+          });
+        }, 300);
+      }
 
-    function handleClickOutside(event: MouseEvent): void {
-      const isInImage = (event.target === modalImg);
-      const isInNavButtons = (event.target as HTMLElement).closest('.nav-btns') !== null;
+      function handleClickOutside(event: MouseEvent): void {
+        const isInImage = (event.target === modalImg);
+        const isInNavButtons = (event.target as HTMLElement).closest('.nav-btns') !== null;
 
-      if (!isInImage && !isInNavButtons) {
-        closeModal();
+        if (!isInImage && !isInNavButtons) {
+          closeModal();
+        }
       }
     }
+    
   });
 </script>
 
